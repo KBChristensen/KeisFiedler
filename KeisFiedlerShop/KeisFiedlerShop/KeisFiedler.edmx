@@ -21,6 +21,10 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="nvarchar(max)" Nullable="false" />
     <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="userlevel" Type="smallint" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="zipcode" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductSet">
     <Key>
@@ -69,6 +73,10 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" Nullable="false" />
           <Property Name="password" Type="String" Nullable="false" />
+          <Property Name="userlevel" Type="Int16" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="address" Type="String" Nullable="false" />
+          <Property Name="zipcode" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -105,6 +113,10 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="userlevel" ColumnName="userlevel" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
