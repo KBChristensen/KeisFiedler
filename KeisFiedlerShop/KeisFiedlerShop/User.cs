@@ -21,5 +21,6 @@ namespace KeisFiedlerShop
         public string email { get; set; }
         public string address { get; set; }
         public string zipcode { get; set; }
+        public string username { get; set; }
     }
 }

@@ -21,13 +21,22 @@ namespace KeisFiedlerShop
 
             var query = (from user in keisFiedlerDb.UserSet select user).ToList();
 
-            foreach (var user in query)
+            if (query.Count > 0)
             {
-                if (user.name == usernameTextBox.Text && user.password == SHA256.Create(passwordTextBox.Text).ToString())
+                foreach (var user in query)
                 {
-                    
+                    if (user.username == usernameTextBox.Text && user.password == SHA256.Create(passwordTextBox.Text).ToString())
+                    {
+                        Server.Transfer("About.aspx", true);
+                    }
                 }
             }
+            else
+            {
+                loginErrorLabel.Text = "Forkert Brugernavn eller password, prøv igen";
+                loginErrorLabel.Visible = true;
+            }
+            
         }
     }
 }

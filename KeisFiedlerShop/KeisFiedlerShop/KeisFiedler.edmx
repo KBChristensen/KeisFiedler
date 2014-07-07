@@ -25,6 +25,7 @@
     <Property Name="email" Type="nvarchar(max)" Nullable="false" />
     <Property Name="address" Type="nvarchar(max)" Nullable="false" />
     <Property Name="zipcode" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductSet">
     <Key>
@@ -77,6 +78,7 @@
           <Property Name="email" Type="String" Nullable="false" />
           <Property Name="address" Type="String" Nullable="false" />
           <Property Name="zipcode" Type="String" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -117,6 +119,7 @@
           <ScalarProperty Name="email" ColumnName="email" />
           <ScalarProperty Name="address" ColumnName="address" />
           <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="username" ColumnName="username" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
