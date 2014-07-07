@@ -54,6 +54,7 @@
                         <li><a runat="server" href="~/">Forside</a></li>
                         <li><a runat="server" href="~/About">Om os</a></li>
                         <li><a runat="server" href="~/Contact">Kontakt</a></li>
+                        <li><a runat="server" href="~/News">Nyheder</a></li>
                         <li><a runat="server" href="~/Login">Log ind</a></li>
                     </ul>
                 </div>
