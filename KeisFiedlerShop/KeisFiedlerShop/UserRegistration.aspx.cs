@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.Sockets;
 using System.Web;
@@ -15,23 +16,24 @@ namespace KeisFiedlerShop
 
 		}
 
-       // protected void registerBtn_OnClick(object sender, EventArgs e)
-       // {
-       //   using (KeisFiedlerContainer keisFiedlerDb = new KeisFiedlerContainer())
-       //     {
-       //         KeisFiedlerShop.User user = new User();
-       //         user.username = usernameTextBox.Text;
-       //         user.name = nameTextBox.Text;
-       //         user.address = adressTextBox.Text;
-       //         user.zipcode = zipcodeTextBox.Text;
-       //         user.password = passwordTextBox.Text;
-       //         
-       //
-       //         KeisFiedlerShop.User.InsertOnSubmit(user);
-       //         KeisFiedlerShop.SubmitChanges();
-       //
-       //     }
-       // }
+        protected void registerBtn_OnClick(object sender, EventArgs e)
+        {
+            string conString = "Data Source=MORTENLAPTOP\\SQLEXPRESS;Initial Catalog=KeisFiedler;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework";
+            using (KeisFiedlerDbDataContext keisFiedlerDb = new KeisFiedlerDbDataContext(conString))
+            {
+                UserSet user = new UserSet();
+                user.Username = usernameTextBox.Text;
+                user.Name = nameTextBox.Text;
+                user.Address = adressTextBox.Text;
+                user.Zipcode = int.Parse(zipcodeTextBox.Text);
+                user.Password = passwordTextBox.Text;
+                user.Email = emailTextBox.Text;
+                user.Userlevel = 3;
+
+                keisFiedlerDb.UserSets.InsertOnSubmit(user);
+                keisFiedlerDb.SubmitChanges();
+            }
+        }
 
             
 	}

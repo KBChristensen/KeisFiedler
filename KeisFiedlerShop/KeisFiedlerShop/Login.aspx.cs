@@ -17,15 +17,15 @@ namespace KeisFiedlerShop
 
         protected void loginBtn_OnClick(object sender, EventArgs e)
         {
-            KeisFiedlerContainer keisFiedlerDb = new KeisFiedlerContainer();
+            KeisFiedlerDbDataContext keisFiedlerDb = new KeisFiedlerDbDataContext();
 
-            var query = (from user in keisFiedlerDb.UserSet select user).ToList();
-
+            var query = (from user in keisFiedlerDb.UserSets select user).ToList();
+            
             if (query.Count > 0)
             {
                 foreach (var user in query)
                 {
-                    if (user.username == usernameTextBox.Text && user.password == SHA256.Create(passwordTextBox.Text).ToString())
+                    if (user.Username == usernameTextBox.Text && user.Password == SHA256.Create(passwordTextBox.Text).ToString())
                     {
                         Server.Transfer("About.aspx", true);
                     }

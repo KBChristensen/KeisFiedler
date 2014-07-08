@@ -50,6 +50,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
@@ -113,7 +114,6 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="KeisFiedler.edmx.sql" />
     <Content Include="Login.aspx" />
     <Content Include="MyPage.aspx" />
     <Content Include="News.aspx" />
@@ -121,22 +121,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <EntityDeploy Include="KeisFiedler.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>KeisFiedler.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="KeisFiedler.edmx.diagram">
-      <DependentUpon>KeisFiedler.edmx</DependentUpon>
-    </Content>
-    <Content Include="KeisFiedler.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KeisFiedler.Context.cs</LastGenOutput>
-      <DependentUpon>KeisFiedler.edmx</DependentUpon>
-    </Content>
-    <Content Include="KeisFiedler.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>KeisFiedler.cs</LastGenOutput>
-      <DependentUpon>KeisFiedler.edmx</DependentUpon>
+    <Content Include="KeisFiedlerDb.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>KeisFiedlerDb.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Products.aspx" />
@@ -206,12 +194,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Category.cs">
-      <DependentUpon>KeisFiedler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ComplexType1.cs">
-      <DependentUpon>KeisFiedler.tt</DependentUpon>
-    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -229,20 +211,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="KeisFiedler.Context.cs">
+    <Compile Include="KeisFiedlerDb.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>KeisFiedler.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KeisFiedler.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KeisFiedler.tt</DependentUpon>
-    </Compile>
-    <Compile Include="KeisFiedler.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>KeisFiedler.edmx</DependentUpon>
+      <DependentUpon>KeisFiedlerDb.dbml</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -264,9 +236,6 @@
     </Compile>
     <Compile Include="News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Product.cs">
-      <DependentUpon>KeisFiedler.tt</DependentUpon>
     </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
@@ -290,9 +259,6 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>KeisFiedler.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserRegistration.aspx.cs">
       <DependentUpon>UserRegistration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -309,7 +275,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="KeisFiedlerDb.dbml.layout">
+      <DependentUpon>KeisFiedlerDb.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -22,6 +22,24 @@ namespace KeisFiedlerShop {
         protected global::System.Web.UI.WebControls.TextBox usernameTextBox;
         
         /// <summary>
+        /// passwordTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
+        
+        /// <summary>
+        /// repeatpasswordTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox repeatpasswordTextBox;
+        
+        /// <summary>
         /// nameTextBox control.
         /// </summary>
         /// <remarks>
@@ -49,22 +67,13 @@ namespace KeisFiedlerShop {
         protected global::System.Web.UI.WebControls.TextBox zipcodeTextBox;
         
         /// <summary>
-        /// passwordTextBox control.
+        /// emailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
-        
-        /// <summary>
-        /// repeatpasswordTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox repeatpasswordTextBox;
+        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
         
         /// <summary>
         /// registerBtn control.
