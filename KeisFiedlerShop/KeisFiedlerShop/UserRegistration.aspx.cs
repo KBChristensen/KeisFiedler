@@ -15,23 +15,23 @@ namespace KeisFiedlerShop
 
 		}
 
-        protected void registerBtn_OnClick(object sender, EventArgs e)
-        {
-            using (KeisFiedlerContainer keisFiedlerDb = new KeisFiedlerContainer())
-            {
-                KeisFiedlerShop.User user = new User();
-                user.username = usernameTextBox.Text;
-                user.name = nameTextBox.Text;
-                user.address = adressTextBox.Text;
-                user.zipcode = zipcodeTextBox.Text;
-                user.password = passwordTextBox.Text;
-                
-
-                // KeisFiedlerShop.User.InsertOnSubmit(user);
-                // KeisFiedlerShop.SubmitChanges();
-
-            }
-        };
+       // protected void registerBtn_OnClick(object sender, EventArgs e)
+       // {
+       //   using (KeisFiedlerContainer keisFiedlerDb = new KeisFiedlerContainer())
+       //     {
+       //         KeisFiedlerShop.User user = new User();
+       //         user.username = usernameTextBox.Text;
+       //         user.name = nameTextBox.Text;
+       //         user.address = adressTextBox.Text;
+       //         user.zipcode = zipcodeTextBox.Text;
+       //         user.password = passwordTextBox.Text;
+       //         
+       //
+       //         KeisFiedlerShop.User.InsertOnSubmit(user);
+       //         KeisFiedlerShop.SubmitChanges();
+       //
+       //     }
+       // }
 
             
 	}
