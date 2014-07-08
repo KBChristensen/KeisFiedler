@@ -10,7 +10,7 @@
 namespace KeisFiedlerShop {
     
     
-    public partial class Login {
+    public partial class UserRegistration {
         
         /// <summary>
         /// usernameTextBox control.
@@ -22,6 +22,33 @@ namespace KeisFiedlerShop {
         protected global::System.Web.UI.WebControls.TextBox usernameTextBox;
         
         /// <summary>
+        /// nameTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox nameTextBox;
+        
+        /// <summary>
+        /// adressTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox adressTextBox;
+        
+        /// <summary>
+        /// zipcodeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox zipcodeTextBox;
+        
+        /// <summary>
         /// passwordTextBox control.
         /// </summary>
         /// <remarks>
@@ -31,13 +58,13 @@ namespace KeisFiedlerShop {
         protected global::System.Web.UI.WebControls.TextBox passwordTextBox;
         
         /// <summary>
-        /// loginBtn control.
+        /// repeatpasswordTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginBtn;
+        protected global::System.Web.UI.WebControls.TextBox repeatpasswordTextBox;
         
         /// <summary>
         /// registerBtn control.
@@ -47,14 +74,5 @@ namespace KeisFiedlerShop {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button registerBtn;
-        
-        /// <summary>
-        /// loginErrorLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label loginErrorLabel;
     }
 }

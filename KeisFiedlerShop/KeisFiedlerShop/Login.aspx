@@ -7,6 +7,7 @@
         Password: <br />
         <asp:TextBox runat="server" ID="passwordTextBox" /><br />
         <asp:Button runat="server" ID="loginBtn" OnClick="loginBtn_OnClick" Text="Log ind"/><br /><br />
+        <asp:Button runat="server" ID="registerBtn" OnClick="registerBtn_OnClick" Text="Opret Bruger"/>
         <asp:Label runat="server" Visible="False" ID="loginErrorLabel"></asp:Label>
     </div>
 </asp:Content>

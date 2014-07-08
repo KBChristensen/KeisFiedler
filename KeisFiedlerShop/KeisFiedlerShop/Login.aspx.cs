@@ -38,5 +38,10 @@ namespace KeisFiedlerShop
             }
             
         }
+
+        protected void registerBtn_OnClick(object sender, EventArgs e)
+        {
+            Server.Transfer("UserRegistration.aspx", true); ;
+        }
     }
 }
