@@ -14,16 +14,7 @@ namespace KeisFiedlerShop
         private string password;
         protected void Page_Load(object sender, EventArgs e)
         {
-            KeisFiedlerDbDataContext test = new KeisFiedlerDbDataContext();
-
-            var query = (from variable in test.UserSets where variable.UserId == 1 select variable).ToList();
-
-            foreach (var user in query)
-            {
-                label1.Text = user.Name;
-                label2.Text = user.Password;
-            }
-
+            
         }
     }
 }
