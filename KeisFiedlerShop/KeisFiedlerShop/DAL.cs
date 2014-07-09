@@ -15,7 +15,7 @@ namespace KeisFiedlerShop
         private List<OrderSet> OrderList; 
         public DAL()
         {
-            DbContext = new KeisFiedlerDbDataContext("Data Source=Kasper-Pc\\SQLEXPRESS;Initial Catalog=KeisFiedler;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            DbContext = new KeisFiedlerDbDataContext("Data Source=MORTENLAPTOP\\SQLEXPRESS;Initial Catalog=KeisFiedler;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
         }
 
         ~DAL()
@@ -44,6 +44,20 @@ namespace KeisFiedlerShop
             return tempUser;
         }
 
+        public void DeleteUser(long id)
+        {
+            UserSet delUser = (from user in DbContext.UserSets where user.UserId == id select user).ToList().Find(us => us.UserId == id);
+            
+            DbContext.UserSets.DeleteOnSubmit(delUser);
+        }
+
+        public void DeleteUser(string username)
+        {
+            UserSet delUser = (from user in DbContext.UserSets where user.Username == username select user).ToList().Find(us => us.Username == username);
+
+            DbContext.UserSets.DeleteOnSubmit(delUser);
+        }
+
         public List<Category> GetAllCategories()
         {
             List<Category> queryList = (from category in DbContext.Categories select category).ToList();
@@ -62,6 +76,20 @@ namespace KeisFiedlerShop
 
         }
 
+        public void DeleteCategory(long id)
+        {
+            Category delCat = (from category in DbContext.Categories where category.CategoryId == id select category).ToList().Find(cat => cat.CategoryId == id);
+
+            DbContext.Categories.DeleteOnSubmit(delCat);
+        }
+
+        public void DeleteCategory(string catname)
+        {
+            Category delCat = (from category in DbContext.Categories where category.CategoryName == catname select category).ToList().Find(cat => cat.CategoryName == catname);
+
+            DbContext.Categories.DeleteOnSubmit(delCat);
+        }
+
         public Product GetSpecificProduct(long id)
         {
             Product tempProduct = (from product in DbContext.Products select product).ToList().Find(prod => prod.ProductId == id);
@@ -74,6 +102,20 @@ namespace KeisFiedlerShop
             List<Product> productList = (from product in DbContext.Products select product).ToList();
 
             return productList;
+        }
+
+        public void DeleteProduct(long id)
+        {
+            Product delProduct = (from product in DbContext.Products where product.ProductId == id select product).ToList().Find(prod => prod.ProductId == id);
+
+            DbContext.Products.DeleteOnSubmit(delProduct);
+        }
+
+        public void DeleteProduct(string productname)
+        {
+            Product delProduct = (from product in DbContext.Products where product.ProductName == productname select product).ToList().Find(prod => prod.ProductName == productname);
+
+            DbContext.Products.DeleteOnSubmit(delProduct);
         }
 
         public List<OrderSet> GetUserOrders(long userId)
@@ -95,6 +137,13 @@ namespace KeisFiedlerShop
             OrderSet tempOrder = (from order in DbContext.OrderSets where order.OrderId == id select order) as OrderSet;
 
             return tempOrder;
+        }
+
+        public void DeleteOrder(long id)
+        {
+            OrderSet delOrder = (from order in DbContext.OrderSets where order.OrderId == id select order).ToList().Find(order => order.OrderId == id);
+
+            DbContext.OrderSets.DeleteOnSubmit(delOrder);
         }
 
         public void CreateUser(UserSet user)

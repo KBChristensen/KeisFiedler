@@ -77,7 +77,7 @@
     <table>
         <tr>
             <td><asp:Label ID="LabelRemoveProduct" runat="server">Produkt:</asp:Label></td>
-            <td><asp:DropDownList ID="DropDownRemoveProduct" runat="server" >
+            <td><asp:DropDownList ID="DropDownRemoveProduct" ItemType="KeisFiedlerShop.Product" runat="server" >
                 </asp:DropDownList>
             </td>
         </tr>
