@@ -7,6 +7,6 @@
         </Nodes>
     </asp:TreeView>
     
-    <asp:Image runat="server" ImageUrl="http://keisfiedler.dk/picture/images/produkter/1.jpg"/>
+    
     
 </asp:Content>

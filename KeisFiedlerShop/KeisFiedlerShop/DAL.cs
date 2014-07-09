@@ -13,9 +13,9 @@ namespace KeisFiedlerShop
         private List<UserSet> UserList;
         private List<Category> CategoryList;
         private List<OrderSet> OrderList; 
-        DAL()
+        public DAL()
         {
-            DbContext = new KeisFiedlerDbDataContext("Data Source=MORTENLAPTOP\\SQLEXPRESS;Initial Catalog=KeisFiedler;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
+            DbContext = new KeisFiedlerDbDataContext("Data Source=Kasper-Pc\\SQLEXPRESS;Initial Catalog=KeisFiedler;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework");
         }
 
         ~DAL()
