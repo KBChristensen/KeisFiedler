@@ -1,0 +1,13 @@
+diff --git a/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_slideshow/commerce_kickstart_slideshow.module b/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_slideshow/commerce_kickstart_slideshow.module
+index ce7bbed..6e4af5a 100644
+--- a/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_slideshow/commerce_kickstart_slideshow.module
++++ b/profiles/commerce_kickstart/modules/commerce_kickstart/commerce_kickstart_slideshow/commerce_kickstart_slideshow.module
+@@ -15,7 +15,7 @@ function commerce_kickstart_slideshow_library() {
+     'website' => 'http://bxslider.com/',
+     'version' => '4.0',
+     'js' => array(
+-      libraries_get_path('jquery.bxslider') . '/jquery.bxslider.min.js' => array(),
++      libraries_get_path('jquery.bxslider') . '/dist/jquery.bxslider.min.js' => array(),
+     ),
+   );
+   return $libraries;
