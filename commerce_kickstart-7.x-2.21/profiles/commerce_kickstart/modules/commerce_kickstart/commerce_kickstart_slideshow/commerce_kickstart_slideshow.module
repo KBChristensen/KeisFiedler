@@ -13,12 +13,12 @@ function commerce_kickstart_slideshow_library() {
   $libraries['bxslider'] = array(
     'title' => 'Bxslider',
     'website' => 'http://bxslider.com/',
-    'version' => '4.0',
-    'js' => array(
-      libraries_get_path('jquery.bxslider') . '/jquery.bxslider.min.js' => array(),
-    ),
-  );
-  return $libraries;
+     'version' => '4.0',
+     'js' => array(
+      libraries_get_path('jquery.bxslider') . '/dist/jquery.bxslider.min.js' => array(),
+     ),
+   );
+   return $libraries;
 }
 
 /**
